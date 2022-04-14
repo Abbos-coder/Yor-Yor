@@ -1,0 +1,233 @@
+.wedding {
+	overflow-x: hidden;
+	&__body {
+		display: flex;
+	}
+
+	&__all-category {
+		@include wrap;
+	}
+	&__title {
+		@include mainTitle;
+		margin-bottom: 40px;
+		@media (max-width: 414px) {
+			line-height: 35px;
+			font-size: 30px;
+		}
+	}
+	&__cards {
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__card {
+		position: relative;
+		cursor: pointer;
+		width: 241px;
+		height: 241px;
+		filter: drop-shadow(0px 12.1606px 29.533px rgba(0, 0, 0, 0.12));
+		border-radius: 10px;
+		overflow: hidden;
+		@include trs;
+		&:hover {
+			img {
+				transform: scale(1.15);
+			}
+		}
+		img {
+			transition: all ease-in 0.3s;
+			width: 100%;
+			height: 100%;
+			object-position: center;
+			object-fit: cover;
+		}
+	}
+
+	&__card-mark {
+		font-weight: normal;
+		font-size: 15px;
+		color: #ffffff;
+		background: #ff477e;
+		border-radius: 86px;
+		padding: 7px 23px;
+		position: absolute;
+		left: 10px;
+		bottom: 10px;
+	}
+	// wedding page _id style
+	&__items {
+		@include wrap;
+		margin-bottom: 100px;
+		overflow-x: hidden;
+	}
+
+	&__items-title {
+		@include mainTitle;
+		margin-bottom: 20px;
+		@media (max-width: 768px) {
+			font-size: 40px;
+			line-height: 45px;
+		}
+		@media (max-width: 414px) {
+			font-size: 30px;
+			line-height: 35px;
+		}
+	}
+
+	&__items--breadcrumb {
+		display: flex;
+		align-items: center;
+		margin-left: 85px;
+		margin-bottom: 40px;
+		@media (max-width: 414px) {
+			margin-left: 15px;
+		}
+		span {
+			display: inline-block;
+			width: 8px;
+			height: 8px;
+			background: #fe004c;
+			margin: 0 15px;
+			border-radius: 50%;
+		}
+	}
+
+	&__items--back {
+		font-weight: 600;
+		font-size: 14px;
+		color: #000000;
+		text-decoration: none;
+	}
+
+	&__items--id {
+		font-weight: 600;
+		font-size: 14px;
+		color: #7d7987;
+	}
+
+	&__items--filter {
+		display: flex;
+		align-items: center;
+		width: 420px;
+		@media (max-width: 480px) {
+			flex-wrap: wrap;
+			width: 300px;
+			gap: 10px;
+			justify-content: center;
+			align-items: center;
+		}
+		justify-content: flex-end;
+		min-width: 100%;
+		margin-bottom: 40px;
+		.place {
+			@media (max-width: 480px) {
+				margin-right: 0;
+			}
+			margin-right: 25px;
+		}
+		.custom-select {
+			width: 195px;
+			border-color: transparent;
+			padding: 16px 17px;
+			height: auto;
+			border-radius: 8px;
+			font-size: 14px;
+			color: #7d7987;
+			box-shadow: 10px 12px 24px rgba(227, 222, 222, 0.4);
+			option {
+				color: #262626;
+				background: #000;
+			}
+		}
+	}
+	// cards style
+	&__items--cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		row-gap: 40px;
+		column-gap: 18px;
+	}
+
+	&__items--card {
+		width: 243px;
+	}
+
+	&__items--card-img {
+		position: relative;
+		border-radius: 17px;
+		overflow: hidden;
+		width: 243px;
+		height: 243px;
+		&:hover {
+			img {
+				transform: scale(1.15);
+			}
+		}
+		img {
+			transition: all linear 0.3s;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	&__items--card-mark {
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		font-size: 13px;
+		color: #ff477e;
+		background: #fff;
+		border-radius: 50px;
+		width: 37px;
+		height: 26px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		&.active {
+			color: #f8f8f8;
+			background: #ff477e;
+			cursor: pointer;
+		}
+	}
+
+	&__items--card-rating {
+		.b-rating {
+			background: transparent;
+			padding: 0;
+			max-width: 60%;
+		}
+	}
+
+	&__items--card-title {
+		font-weight: 600;
+		font-size: 15px;
+		color: #292626;
+		margin-bottom: 5px;
+		line-height: 130%;
+	}
+
+	&__items--card-subtitle {
+		max-width: 221px;
+		font-weight: 500;
+		font-size: 12px;
+		color: #7d7987;
+		margin-bottom: 12px;
+		line-height: 14px;
+	}
+
+	&__items--card-btn a {
+		font-weight: 600;
+		font-size: 12px;
+		color: #ffffff;
+		padding: 7px 14px;
+		background: #ff0a54;
+		border-radius: 8px;
+		text-decoration: none;
+	}
+}

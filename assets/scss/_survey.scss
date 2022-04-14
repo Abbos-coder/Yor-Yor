@@ -1,0 +1,155 @@
+.survey {
+	overflow-x: hidden;
+	&__body {
+		display: flex;
+	}
+
+	&__main {
+		@include wrap;
+		@media (max-width: 480px) {
+			padding: 0px 15px;
+		}
+	}
+
+	&__main--title {
+		@include mainTitle;
+		margin-bottom: 40px;
+	}
+
+	&__main--view-all {
+		font-weight: normal;
+		font-size: 14px;
+		color: #292626;
+		padding: 17px 16px;
+		background: #ffffff;
+		box-shadow: 10px 12px 24px rgba(227, 222, 222, 0.4);
+		border-radius: 5px;
+		margin-bottom: 40px;
+		display: inline-block;
+		white-space: nowrap;
+	}
+
+	// &__main--cards {
+	// }
+
+	&__main--card {
+		width: 100%;
+		max-width: 678px;
+		margin-bottom: 50px;
+		@media (max-width: 480px) {
+			width: 96%;
+		}
+	}
+
+	&__main--card-title {
+		font-weight: bold;
+		font-size: 18px;
+		color: #292626;
+		margin-bottom: 12px;
+	}
+
+	&__main--card-subtitle {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: #7d7987;
+	}
+
+	&__main--card-variant {
+		min-width: 100%;
+		margin-top: 30px;
+
+		img {
+			margin-right: 10px;
+		}
+		input:checked ~ .defoult img {
+			transform: scale(1);
+		}
+		label {
+			margin-bottom: 12px;
+			display: flex;
+			cursor: pointer;
+			user-select: none;
+			.defoult {
+				min-width: 25px;
+				min-height: 25px;
+				max-width: 25px;
+				max-height: 25px;
+				border-radius: 50%;
+				background: #c4c4c4;
+				position: relative;
+				display: inline-block;
+				margin-right: 10px;
+			}
+
+			.defoult img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 25px;
+				height: 25px;
+				object-fit: cover;
+				object-position: center;
+				transform: scale(0);
+				@include trs;
+			}
+			input {
+				display: none;
+			}
+		}
+	}
+	&__main--btn {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 100px;
+		a {
+			font-weight: 600;
+			font-size: 14px;
+			color: #ffffff;
+			padding: 8px 16px;
+			background: #ff0a54;
+			border-radius: 10px;
+			text-decoration: none;
+			@include trs;
+			&:hover {
+				background: #ff4d82;
+			}
+		}
+	}
+	&__main-wrapp {
+		display: flex;
+		gap: 10px;
+		@media (max-width: 480px) {
+			flex-wrap: wrap;
+		}
+	}
+	&__main--adds1 {
+		width: 330px;
+		height: 220px;
+		margin-bottom: 125px;
+		@media (max-width: 480px) {
+			width: 318px;
+			margin-bottom: 20px;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+	&__main--adds2 {
+		width: 330px;
+		height: 500px;
+		@media (max-width: 480px) {
+			width: 318px;
+			margin-bottom: 30px;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}
